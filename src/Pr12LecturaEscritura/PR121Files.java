@@ -24,8 +24,7 @@ public class PR121Files {
             } else {
                 System.out.println("File already exists.");
             }
-        } catch (IOException e) { e.printStackTrace(); }
-        try {
+
             if (file2.createNewFile()) {
                 System.out.println("File created: " + file2.getName());
             } else {
@@ -49,14 +48,14 @@ public class PR121Files {
             } catch (Exception e) {e.printStackTrace();}
         //Elimina “file1.txt”.
             if (file1.delete()) {
-                System.out.println(file1.getName() + " delete");
+                System.out.println(file1.getName() + " deleted");
             } else {
                 System.out.println("Failed delete of file.");
             }
         //Vuelve a mostrar un listado de los archivos de la carpeta "myfiles"
         try {
             File[] filesList = dirName.listFiles();
-            System.out.println("Els archius de la carpeta son:\n");
+            System.out.println("\nEls archius de la carpeta son:");
             for (File file : filesList){
                 System.out.println("Archiu: " + file.getName());
             }
