@@ -1,12 +1,11 @@
 package Pr12LecturaEscritura;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class PR121Files {
     public static void main(String[] args) {
-        String dir = "./src/";
+        String dir = "./src/Pr12LecturaEscritura/";
         File dirName = new File(dir + "myFiles");
         File file1 = new File(dirName + "/" + "file1.txt");
         File file2 = new File(dirName + "/" + "file2.txt");
@@ -38,7 +37,7 @@ public class PR121Files {
         } else {
             System.out.println("Failed rename\n");
         }
-        //Muestra un listado de los archivos dentro de la carpeta "myfiles" con el mensaje "Els arxius de la carpeta son:"
+        // Muestra un listado de los archivos dentro de la carpeta "myfiles" con el mensaje "Els arxius de la carpeta son:"
         try {
             File[] filesList = dirName.listFiles();
             System.out.println("Els archius de la carpeta son:");
@@ -46,13 +45,13 @@ public class PR121Files {
                 System.out.println("Archiu: " + file.getName());
             }
             } catch (Exception e) {e.printStackTrace();}
-        //Elimina “file1.txt”.
+        // Elimina “file1.txt”.
             if (file1.delete()) {
                 System.out.println(file1.getName() + " deleted");
             } else {
                 System.out.println("Failed delete of file.");
             }
-        //Vuelve a mostrar un listado de los archivos de la carpeta "myfiles"
+        // Vuelve a mostrar un listado de los archivos de la carpeta "myfiles"
         try {
             File[] filesList = dirName.listFiles();
             System.out.println("\nEls archius de la carpeta son:");
@@ -60,5 +59,5 @@ public class PR121Files {
                 System.out.println("Archiu: " + file.getName());
             }
         } catch (Exception e) {e.printStackTrace();}
-    }//Main
+    }// Main
 }
