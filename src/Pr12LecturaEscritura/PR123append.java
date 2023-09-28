@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class PR123append {
     public static void main(String[] args) {
-        Scanner scnr = new Scanner("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt");
+        Scanner scnr = new Scanner("./src/Pr12LecturaEscritura/Archivos/frasesMatrix.txt");
         try {
-            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt", true);
+            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/Archivos/frasesMatrix.txt", true);
             while (scnr.hasNextLine()) {
                 scnr.nextLine();
                 System.out.println("a");

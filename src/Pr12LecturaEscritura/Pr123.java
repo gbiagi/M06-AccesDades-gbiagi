@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Pr123 {
     public static void main(String[] args) {
-        File fileMatrix = new File("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt");
+        File fileMatrix = new File("./src/Pr12LecturaEscritura/Archivos/frasesMatrix.txt");
         try {
             if (fileMatrix.createNewFile()) {
                 System.out.println("File created: " + fileMatrix.getName());
@@ -15,7 +15,7 @@ public class Pr123 {
             }
         } catch (IOException e) { e.printStackTrace(); }
         try {
-            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt");
+            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/Archivos/frasesMatrix.txt");
             matrixWriter.write("Yo sólo puedo mostrarte la puerta\n");
             matrixWriter.write("Tú eres quien la tiene que atravesar\n");
             matrixWriter.close();
