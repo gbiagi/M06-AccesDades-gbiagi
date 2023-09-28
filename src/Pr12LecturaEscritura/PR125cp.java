@@ -7,25 +7,18 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PR125cp {
-    public static void main(String[] args) {
-        Scanner scnr = new Scanner(System.in);
+    public static void main(String pathSource, String pathTarget) {
         Scanner readFile;
-        String pathSource;
-        String pathTarget;
-
         try {
-            System.out.println("Ruta archivo: ");
-            pathSource = scnr.nextLine();
-            System.out.println("Ruta de destinacio: ");
-            pathTarget = scnr.nextLine();
-            scnr.close();
-            //File copiedFile = new File(pathTarget);
+            String data = "";
+            File fileToCopy = new File(pathSource);
             FileWriter copiedFile = new FileWriter(pathTarget);
-            readFile = new Scanner(pathSource);
-            while (readFile.hasNextInt()) {
+            readFile = new Scanner(fileToCopy);
+            while (readFile.hasNextLine()) {
                 String line = readFile.nextLine();
-                copiedFile.write(line);
+                data = data + line + "\n";
             }
+            copiedFile.write(data);
             copiedFile.close();
             readFile.close();
         } catch (IOException e) {
