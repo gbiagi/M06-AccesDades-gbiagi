@@ -8,10 +8,11 @@ public class PR123append {
     public static void main(String[] args) {
         Scanner scnr = new Scanner("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt");
         try {
+            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt", true);
             while (scnr.hasNextLine()) {
+                scnr.nextLine();
                 System.out.println("a");
             }
-            FileWriter matrixWriter = new FileWriter("./src/Pr12LecturaEscritura/myFiles/frasesMatrix.txt");
             matrixWriter.write("Yo sólo puedo mostrarte la puerta\n");
             matrixWriter.write("Tú eres quien la tiene que atravesar\n");
             matrixWriter.close();
