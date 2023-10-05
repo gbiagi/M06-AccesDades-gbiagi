@@ -14,7 +14,7 @@ public class PR130mainPersonesHashmap {
         persones.put("Manuel", 75);
 
         try {
-        FileOutputStream fileOS = new FileOutputStream("./src/Pr12LecturaEscritura/Archivos/PR130persones.dat");
+        FileOutputStream fileOS = new FileOutputStream("./src/Pr13Serialize/Archivos/PR130persones.dat");
         DataOutputStream dataOS = new DataOutputStream(fileOS);
         for(String name : persones.keySet()) {
             dataOS.writeUTF(name);

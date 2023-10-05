@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class Main {
+public class MainPr12 {
     static Scanner in = new Scanner(System.in); // System.in és global
     // Main
     public static void main(String[] args) throws InterruptedException, IOException {
@@ -40,7 +40,6 @@ public class Main {
         }
         in.close();
     }
-
     static public String llegirLinia (String text) {
         System.out.print(text);
         return in.nextLine();
