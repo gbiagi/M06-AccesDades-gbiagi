@@ -35,7 +35,6 @@ public class Main {
                     case 5: PR123sobreescriu.main(args); break;
                     case 6: PR124linies.main(args); break;
                     case 7: PR125cp.main(llegirLinia("Ruta archiu a copiar: "), llegirLinia("Ruta destinacio: ")); break;
-                    case 8: llegirLinia("Hola David");
                     case 100: running = false; break;
                     default: break;
                 }
