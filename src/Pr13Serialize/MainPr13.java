@@ -12,6 +12,7 @@ public class MainPr13 {
             String menu = "Escull una opció:";
             menu = menu + "\n 0) PR131Escriu";
             menu = menu + "\n 1) PR131Llegeix";
+            menu = menu + "\n 2) PR132main";
             menu = menu + "\n 100) Sortir";
             System.out.println(menu);
             int opcio = Integer.valueOf(llegirLinia("Opció:"));
@@ -19,6 +20,7 @@ public class MainPr13 {
                 switch (opcio) {
                     case 0: PR131mainEscriu.main(args); break;
                     case 1: PR131mainLlegeix.main(args); break;
+                    case 2: Pr132main.main(args); break;
                     case 100: running = false; break;
                     default: break;
                 }
