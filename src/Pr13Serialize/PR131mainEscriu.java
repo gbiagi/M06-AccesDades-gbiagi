@@ -11,7 +11,7 @@ public class PR131mainEscriu {
             FileOutputStream fileOS = new FileOutputStream("./src/Pr13Serialize/Archivos/PR131HashMapData.ser");
             ObjectOutputStream objOS = new ObjectOutputStream(fileOS);
 
-            PR131hasmap obj1 = new PR131hasmap();
+            PR131hashmap obj1 = new PR131hashmap();
             objOS.writeObject(obj1);
 
             fileOS.close();

@@ -4,13 +4,22 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class PR131hashmap implements Serializable {
-    public static void main(String[] args) {
-        HashMap<String, Integer> listaPersonas = new HashMap<>();
-        listaPersonas.put("David", 23);
-        listaPersonas.put("Gean", 28);
-        listaPersonas.put("Alejandro", 30);
-        listaPersonas.put("Pablo", 49);
-        listaPersonas.put("Manuel", 75);
+    HashMap<String, Integer> listaPersonas = new HashMap<>();
+
+    public PR131hashmap() {
+        this.listaPersonas.put("David", 23);
+        this.listaPersonas.put("Gean", 28);
+        this.listaPersonas.put("Alejandro", 30);
+        this.listaPersonas.put("Pablo", 49);
+        this.listaPersonas.put("Manuel", 75);
     }
-    void PR131hashmap() {}
+
+    @Override
+    public String toString() {
+        String data = "";
+        for (String key : listaPersonas.keySet()){
+            data += "Nom : " + key + " Edat: " + listaPersonas.get(key) + "\n";
+        }
+        return data;
+    }
 }

@@ -10,11 +10,13 @@ public class PR131mainLlegeix {
             FileInputStream fileIN = new FileInputStream("./src/Pr13Serialize/Archivos/PR131HashMapData.ser");
             ObjectInputStream objIn = new ObjectInputStream(fileIN);
 
-            System.out.println(objIn);
+            PR131hashmap hashCopiado = (PR131hashmap) objIn.readObject();
+
+            System.out.println(hashCopiado);
 
             fileIN.close();
             objIn.close();
 
-        } catch (IOException e) {e.printStackTrace();}
+        } catch (IOException | ClassNotFoundException e) {e.printStackTrace();}
     }
 }
