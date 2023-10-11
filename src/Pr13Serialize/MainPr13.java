@@ -21,6 +21,7 @@ public class MainPr13 {
                     case 0: PR131mainEscriu.main(args); break;
                     case 1: PR131mainLlegeix.main(args); break;
                     case 2: Pr132main.main(args); break;
+                    case 3: PR133mainTreballadors.main(args); break;
                     case 100: running = false; break;
                     default: break;
                 }
