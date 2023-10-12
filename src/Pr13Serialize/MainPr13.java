@@ -13,6 +13,8 @@ public class MainPr13 {
             menu = menu + "\n 0) PR131Escriu";
             menu = menu + "\n 1) PR131Llegeix";
             menu = menu + "\n 2) PR132main";
+            menu = menu + "\n 3) PR133mainTreballadors";
+            menu = menu + "\n 4) PR134main";
             menu = menu + "\n 100) Sortir";
             System.out.println(menu);
             int opcio = Integer.valueOf(llegirLinia("Opció:"));
@@ -22,8 +24,10 @@ public class MainPr13 {
                     case 1: PR131mainLlegeix.main(args); break;
                     case 2: Pr132main.main(args); break;
                     case 3: PR133mainTreballadors.main(args); break;
+                    case 4: PR134.main(args); break;
                     case 100: running = false; break;
-                    default: break;
+                    default:
+                        System.out.println("Opcio fora de rang.");;
                 }
             } catch (Exception e) {
                 System.out.println(e);
