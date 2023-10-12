@@ -1,7 +1,7 @@
 package Pr13Serialize;
+
 import java.util.List;
 import java.util.Scanner;
-
 
 public class PR133mainTreballadors {
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class PR133mainTreballadors {
 
         UtilsCSV.update(csv, lineMod, columnMod, newValue);
         UtilsCSV.write(path, csv);
-        System.out.println("Dades guardades.");
+        System.out.println("Dades guardades.\n");
+        UtilsCSV.list(csv);
     }
-
 }
