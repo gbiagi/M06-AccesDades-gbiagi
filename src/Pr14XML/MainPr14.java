@@ -13,10 +13,8 @@ public class MainPr14 {
         while (running) {
             String menu = "Escull una opció:";
             menu = menu + "\n 0) PR140Main";
-            menu = menu + "\n 1) ";
-            menu = menu + "\n 2) ";
-            menu = menu + "\n 3) ";
-            menu = menu + "\n 4) ";
+            menu = menu + "\n 1) PR141Main";
+            menu = menu + "\n 2) Pr142Main";
             menu = menu + "\n 100) Sortir";
             System.out.println(menu);
             int opcio = Integer.valueOf(llegirLinia("Opció:"));
