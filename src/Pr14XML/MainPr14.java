@@ -23,10 +23,8 @@ public class MainPr14 {
             try {
                 switch (opcio) {
                     case 0: PR140Main.main(args); break;
-    //                        case 1: .main(args); break;
-    //                        case 2: .main(args); break;
-    //                        case 3: .main(args); break;
-    //                        case 4: .main(args); break;
+                    case 1: PR141Main.main(args); break;
+                    case 2: Pr142Main.main(args); break;
                     case 100: running = false; break;
                     default:
                         System.out.println("Opcio fora de rang.");;
