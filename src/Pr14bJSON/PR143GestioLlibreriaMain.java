@@ -70,11 +70,13 @@ public class PR143GestioLlibreriaMain {
     static public List<Map<String, Object>> afegir_dades(List<Map<String, Object>> lista_libros){
         // Afegeix un nou llibre amb id 4, títol "Històries de la ciutat", autor "Miquel Soler", any 2022.
             // Crear un hashmap con el libro nuevo
-            Map<String, Object> libroNuevo = new HashMap<>();
-            libroNuevo.put("id",4);
-            libroNuevo.put("titol", "Històries de la ciutat");
-            libroNuevo.put("autor", "Miquel Soler");
-            libroNuevo.put("any", 2022);
+            Map<String, Object> libroNuevo = new HashMap<>()
+            {{{
+                put("id",4);
+                put("titol", "Històries de la ciutat");
+                put("autor", "Miquel Soler");
+                put("any", 2022);
+            }}};
             // Añadir el libro a la lista de libros
             lista_libros.add(libroNuevo);
             // Mostrar lista de libros actualizada
@@ -94,7 +96,9 @@ public class PR143GestioLlibreriaMain {
     static public void guardarJSON(List<Map<String, Object>> lista_libros) throws IOException{
         // Guarda les dades modificades en un fitxer nou anomenat llibres_output.json.
         ObjectMapper objectMapper = new ObjectMapper();
+        // Activar el indent al guardar
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        // Guardar con el indent
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("./src/Pr14bJSON/Archivos/llibres_output.json"), lista_libros);
         System.out.println("Dades guardades amb èxit a llibres_output.json!");
     }
